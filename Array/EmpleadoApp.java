@@ -10,7 +10,7 @@ public class EmpleadoApp {
 
         String[] nombres = {"Juan", "Maria","Carlos"};
         String[] apellidos = {"Perez", "Caceres","Teves"};        
-        int[] edades = {25, 18,40};
+        byte[] edades = {25, 18,40};
         double[] salarios = {2500, 1800,3000};
 
  
@@ -23,12 +23,18 @@ public class EmpleadoApp {
             String apellido=JOptionPane.showInputDialog("Escribe un apellido",apellidos[i]);
  
             String texto=JOptionPane.showInputDialog("Escribe una edad",edades[i]);
-            int edad=Integer.parseInt(texto);
+            byte edad=Byte.parseByte(texto);
  
             texto=JOptionPane.showInputDialog("Escribe un salario",salarios[i]);
             double salario=Double.parseDouble(texto);
  
-            arrayObjetos[i]=new Empleado(nombre, apellido, edad, salario);
+            texto=JOptionPane.showInputDialog("Escribe tu peso (Kg)");
+            float peso=Float.parseFloat(texto);
+ 
+            texto=JOptionPane.showInputDialog("Escribe tu talla (m)");
+            float talla=Float.parseFloat(texto);
+ 
+            arrayObjetos[i]=new Empleado(nombre, apellido, edad, salario, peso, talla);
         }
  
         //Lo recorremos y sumamos de nuevo los salarios
