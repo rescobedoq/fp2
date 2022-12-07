@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="461.0" stylesheets="@calculadora.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication2.Controller">
+   <children>
+      <GridPane layoutX="27.0" layoutY="31.0" prefHeight="590.0" prefWidth="403.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="167.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="145.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="360.0" minHeight="10.0" prefHeight="360.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea id="textareaResult" fx:id="textareaResult" prefHeight="122.0" prefWidth="409.0" style="-fx-font-size: 18;" />
+            <GridPane style="-fx-translate-x: 20px;" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button id="button1" fx:id="button1" onAction="#handleButton1Press" mnemonicParsing="false" styleClass="buttonCalc" text="1" />
+                  <Button id="button2" onAction="#handleButton2Press" mnemonicParsing="false" styleClass="buttonCalc" text="2" GridPane.columnIndex="1" />
+                  <Button id="button3" onAction="#handleButton3Press" mnemonicParsing="false" styleClass="buttonCalc" text="3" GridPane.columnIndex="2" />                  
+                  <Button id="button4" onAction="#handleButton4Press" mnemonicParsing="false" styleClass="buttonCalc" text="4" GridPane.rowIndex="1" />
+                  <Button id="button5" onAction="#handleButton5Press" mnemonicParsing="false" styleClass="buttonCalc" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button id="button6" onAction="#handleButton6Press" mnemonicParsing="false" styleClass="buttonCalc" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button id="button7" onAction="#handleButton7Press" mnemonicParsing="false" styleClass="buttonCalc" text="7" GridPane.rowIndex="2" />
+                  <Button id="button8" onAction="#handleButton8Press" mnemonicParsing="false" styleClass="buttonCalc" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button id="button9" onAction="#handleButton9Press" mnemonicParsing="false" styleClass="buttonCalc" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button id="button0" onAction="#handleButton0Press" mnemonicParsing="false" styleClass="buttonCalc" text="0" GridPane.rowIndex="3" />
+                  <Button id="buttonClear" onAction="#handleButtonClearPress" mnemonicParsing="false" styleClass="buttonCalc" text="CLEAR" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button id="buttonEquals" onAction="#handleButtonEqualsPress" mnemonicParsing="false" styleClass="buttonCalc" text="=" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Button id="buttonAdd" onAction="#handleButtonAddPress" mnemonicParsing="false" styleClass="buttonCalc" text="+" GridPane.rowIndex="4" />
+                  <Button id="buttonSubtraction" onAction="#handleButtonSubtractionPress" mnemonicParsing="false" styleClass="buttonCalc" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button id="buttonMultiplication" onAction="#handleButtonMultiplicationPress" mnemonicParsing="false" styleClass="buttonCalc" text="*" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button id="buttonDivision" onAction="#handleButtonDivisionPress" mnemonicParsing="false" styleClass="buttonCalc" text="/" GridPane.rowIndex="5" />
+                  <Button id="buttonModule" onAction="#handleButtonModulePress" mnemonicParsing="false" styleClass="buttonCalc" text="\%" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Button id="buttonPow" onAction="#handleButtonPowPress" mnemonicParsing="false" styleClass="buttonCalc" text="^" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Button id="buttonLeftBracket" onAction="#handleButtonLeftBracketPress" mnemonicParsing="false" styleClass="buttonCalc" text="(" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button id="buttonRightBracket" onAction="#handleButtonRightBracketPress" mnemonicParsing="false" styleClass="buttonCalc" text=")" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button id="buttonX" onAction="#handleButtonXPress" mnemonicParsing="false" styleClass="buttonCalc" text="x" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+            <Label id="labelCopyright" prefHeight="14.0" prefWidth="403.0" text="Copyright @ 2022 - Richart Escobedo" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</Pane>
